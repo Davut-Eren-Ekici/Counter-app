@@ -1,31 +1,63 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #040417;
+}
+
+
+
+
 .ButonCard{
-    margin-top: 40px;
-    width: 100px;
-    height: 100px;
-     background: rgb(171, 141, 141);
-    
+    width: 110px;
+    height: 55px;
+    font-size: 18px;
+    font-weight: bold;
+    background: rgb(171,141,141);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+     transition: .5s ;
 }
 
 .counter{
-    height: 670px;
-    width: auto;
-    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    padding: 40px;
+    border-radius: 15px;
     border: 2px solid black;
-    background-color: aqua;
+    background-color:#090940;
     font-size: 20px;
+     box-shadow: 0 10px 30px rgba(59, 29, 29, 0.5);
     
+    
+    
+    
+    
+}
+
+.counter h1{
+    color: white;
+    margin-top: 1px;
+    font-size: 36px;
+    margin-bottom: 5px;
+    text-align: center;
 }
 .total{
     
-    text-align: right;
-    margin-left: 100px;
-    background-color: rgb(45, 98, 152);
-    height: 50px;
-    width: 90px;
+    width: 100%;
+    text-align: center;
+    margin: 15px 0;
 }
 .total span{
-    font-size: 50px;
-    color: darkgray;
+    color: white;
+    font-size: 60px;
+    font-weight: bold;
 }
 #ButonArttir{
     color: azure;
@@ -35,4 +67,56 @@
 }
 #ButonSifirla{
     color: cornsilk;
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+    
+   
+    gap: 20px;
+ 
+  
+}
+.ButonCard:hover{
+    
+    border: 1px solid;
+    box-shadow: 0 8px 20px rgba(255,0,0,.5);
+   
+    transform: scale(1.05);
+
+}
+.effect{
+    
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(83, 26, 26);
+    transition: width 2s , height 4s , background-color 3s ;
+    font-size: 10px;
+    
+}
+.effect:hover{
+     
+    width: 300px;
+    height: 300px;
+    background-color:rgb(159, 23, 23) ;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    
+
+}
+.effect a{
+    color: white;
+    text-decoration: none;
+    margin-top: 15px;
+
+}
+.effect a :hover{
+    text-decoration: underline;
 }

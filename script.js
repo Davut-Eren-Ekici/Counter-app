@@ -1,42 +1,44 @@
-const BtnSifirla = document.querySelector("#ButonSifirla");
-const BtnArttir = document.querySelector("#ButonArttir");
-const BtnAzalt = document.querySelector("#ButonAzalt");
-const TotalSpan = document.querySelector(".total span");
+const resetBtn  = document.querySelector("#ButonSifirla");
+const increaseBtn = document.querySelector("#ButonArttir");
+const decreaseBtn  = document.querySelector("#ButonAzalt");
+const totalSpan = document.querySelector(".total span");
 
 
-let Cont=0;
+let count=0;
 
 function updateCounter(){
-        TotalSpan.textContent = Cont;
-        if(Cont > 0){
-            TotalSpan.style.color= "green";
-            updateCounter();
+
+        totalSpan.textContent = count;
+
+        if(count > 0){
+            totalSpan.style.color= "green";
+
         }
 
-        else if(Cont < 0){
-            TotalSpan.style.color= "Red";
-            updateCounter();
+        else if(count < 0){
+            totalSpan.style.color= "Red";
+
         }
         else{
-            TotalSpan.style.color= "White";
-            updateCounter();
+            totalSpan.style.color= "White";
+
         }
 
 }
 
-BtnArttir.addEventListener("click", function(){
-    Cont +=  1;
+increaseBtn.addEventListener("click", function(){
+    count +=  1;
     
    updateCounter();
 
 });   
-BtnAzalt.addEventListener("click", function(){
-    Cont -=  1;
+decreaseBtn .addEventListener("click", function(){
+    count -=  1;
     updateCounter();
 
 });
-BtnSifirla.addEventListener("click", function(){
-    Cont =  0;
+resetBtn .addEventListener("click", function(){
+    count =  0;
     updateCounter();
 
 });
