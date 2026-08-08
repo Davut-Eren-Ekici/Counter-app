@@ -1,3 +1,6 @@
+* {
+    box-sizing: border-box;
+}
 body {
     display: flex;
     justify-content: center;
@@ -19,15 +22,19 @@ body {
     border-radius: 8px;
     cursor: pointer;
     margin-top: 20px;
-     transition: .5s ;
+     transition: transform 0.3s ease,
+                 box-shadow 0.3s ease,
+                 background-color 0.3s ease;
+    flex-wrap: wrap;
 }
 
 .counter{
-
+    
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 500px;
+    max-width: 90%;
     padding: 40px;
     border-radius: 15px;
     border: 2px solid black;
@@ -78,11 +85,16 @@ body {
   
 }
 .ButonCard:hover{
-    
-    border: 1px solid;
-    box-shadow: 0 8px 20px rgba(255,0,0,.5);
-   
     transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(255,0,0,.5);
+    background-color: rgb(190,155,155);
+    
+   
+    
+
+}
+.ButonCard:active{
+    transform: scale(0,2);
 
 }
 .effect{
@@ -94,7 +106,8 @@ body {
     width: 100px;
     height: 100px;
     background-color: rgb(83, 26, 26);
-    transition: width 2s , height 4s , background-color 3s ;
+    /* transition: width 2s , height 4s , background-color 3s ; */
+    transition: all 0.5s ease;
     font-size: 10px;
     
 }
@@ -115,8 +128,10 @@ body {
     color: white;
     text-decoration: none;
     margin-top: 15px;
+    
 
 }
 .effect a :hover{
     text-decoration: underline;
+    
 }
